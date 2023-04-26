@@ -1098,29 +1098,29 @@
         )
       )
     )
-    (symbol "Transistor_FET:QM6006D" (pin_names hide) (in_bom yes) (on_board yes)
+    (symbol "Transistor_FET:2N7002" (pin_names hide) (in_bom yes) (on_board yes)
       (property "Reference" "Q" (at 5.08 1.905 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "QM6006D" (at 5.08 0 0)
+      (property "Value" "2N7002" (at 5.08 0 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "Package_TO_SOT_SMD:TO-252-2" (at 5.08 -1.905 0)
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0)
         (effects (font (size 1.27 1.27) italic) (justify left) hide)
       )
-      (property "Datasheet" "http://www.jaolen.com/images/pdf/QM6006D.pdf" (at 0 0 0)
+      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" (at 0 0 0)
         (effects (font (size 1.27 1.27)) (justify left) hide)
       )
-      (property "ki_keywords" "N-Channel MOSFET" (at 0 0 0)
+      (property "ki_keywords" "N-Channel Switching MOSFET" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "35A Id, 60V Vds, N-Channel Power MOSFET, 18mOhm Ron, 19.3nC Qg (typ), TO252" (at 0 0 0)
+      (property "ki_description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "TO?252*" (at 0 0 0)
+      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "QM6006D_0_1"
+      (symbol "2N7002_0_1"
         (polyline
           (pts
             (xy 0.254 0)
@@ -1231,17 +1231,17 @@
           (fill (type outline))
         )
       )
-      (symbol "QM6006D_1_1"
+      (symbol "2N7002_1_1"
         (pin input line (at -5.08 0 0) (length 2.54)
           (name "G" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "D" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
         (pin passive line (at 2.54 -5.08 90) (length 2.54)
           (name "S" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 2.54 5.08 270) (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
       )
@@ -1958,25 +1958,31 @@
   (symbol (lib_id "Brett_sym:BUK7215") (at 194.945 57.785 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0bc4bf27-d3dc-4241-bb6c-8ffb88859a86)
-    (property "Reference" "Q?" (at 192.405 55.88 90)
+    (property "Reference" "Q2" (at 192.405 60.325 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "BUK7215" (at 200.66 57.785 90)
+    (property "Value" "CMD05N03A" (at 195.58 64.135 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_TO_SOT_SMD:TO-252-2" (at 200.025 59.69 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
-    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK7215-55A.pdf" (at 194.945 57.785 0)
+    (property "Datasheet" "https://datasheet.lcsc.com/lcsc/2210191430_Cmos-CMD05N03A_C5203816.pdf" (at 194.945 57.785 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "LCSC Part" "C5203816" (at 194.945 57.785 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digikey Part" "353-MCU80N03A-TPCT-ND" (at 194.945 57.785 90)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 447b9602-1535-4e33-be0c-f61d248bb6ba))
     (pin "2" (uuid cf464e87-8b79-46de-8ca0-227206f63b62))
     (pin "3" (uuid f133713c-73bd-4c6e-9876-adc9f926d7c4))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
-          (reference "Q?") (unit 1)
+          (reference "Q2") (unit 1)
         )
       )
     )
@@ -2003,9 +2009,42 @@
     (pin "4" (uuid 3b5af127-7437-45ff-a565-b5530af45ca0))
     (pin "5" (uuid 8ba2f4b6-df0d-42b2-9bec-43c27c9fdc39))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "J1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_FET:2N7002") (at 142.24 60.325 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 0e717f97-c337-46c9-952a-7cdf37af39ad)
+    (property "Reference" "Q1" (at 147.32 59.69 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "2N7002" (at 147.32 62.23 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 147.32 62.23 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "https://datasheet.lcsc.com/lcsc/2109301154_YFW-2N7002AK_C2898356.pdf" (at 142.24 60.325 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "LCSC Part" "C2898356" (at 142.24 60.325 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digikey Part" "T2N7002AKLMCT-ND" (at 142.24 60.325 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7d3877c5-a7bb-4d1b-a4eb-ef9c6d495c4e))
+    (pin "2" (uuid bc96bd17-bf14-4e75-9153-c7bf5240ac23))
+    (pin "3" (uuid dafc9c2c-6e56-4aee-a0f2-e4d540e848c6))
+    (instances
+      (project "PowerSection"
+        (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
+          (reference "Q1") (unit 1)
         )
       )
     )
@@ -2029,7 +2068,7 @@
     (pin "1" (uuid 99271911-2388-4889-957f-dcb06cfd921d))
     (pin "2" (uuid 92cf76e0-b508-4413-bc2b-4e2655c07939))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "J2") (unit 1)
         )
@@ -2055,7 +2094,7 @@
     (pin "1" (uuid 0c33870e-5183-43f6-b389-d92b2fa99066))
     (pin "2" (uuid 9986eb16-7c42-4014-b549-d799623f7ef8))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C8") (unit 1)
         )
@@ -2081,7 +2120,7 @@
     (pin "1" (uuid 212ae4ce-78ca-42fb-a0a9-9e7afe94e4f9))
     (pin "2" (uuid 6f0c472b-48b7-48c0-9501-6960d29f70e5))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C9") (unit 1)
         )
@@ -2106,7 +2145,7 @@
     )
     (pin "1" (uuid 3ec558a0-2261-4d53-b104-c3945194c70b))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR02") (unit 1)
         )
@@ -2131,7 +2170,7 @@
     )
     (pin "1" (uuid 5630c527-eed1-41ca-b6f3-70ad8edc3013))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "H3") (unit 1)
         )
@@ -2156,7 +2195,7 @@
     )
     (pin "1" (uuid cfb9b74d-c8cd-4927-b82b-eb73c86a9154))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR05") (unit 1)
         )
@@ -2182,7 +2221,7 @@
     (pin "1" (uuid 7506a381-34c3-452a-a532-fd1ab0bda4cd))
     (pin "2" (uuid 71b9919f-4fc5-4221-98cc-3f87941b0f02))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R8") (unit 1)
         )
@@ -2208,7 +2247,7 @@
     (pin "1" (uuid 97bc0999-9565-45ba-97ca-b6619e74ea60))
     (pin "2" (uuid c2db5fbc-7a17-4692-bb7e-15679ec0a6c1))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C10") (unit 1)
         )
@@ -2234,7 +2273,7 @@
     (pin "1" (uuid e9f6fd4b-5ff7-4419-8af1-dd991c0df049))
     (pin "2" (uuid ffd64a90-9842-429e-a91b-0d55956cc151))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C2") (unit 1)
         )
@@ -2260,7 +2299,7 @@
     (pin "1" (uuid 2dc51030-c516-4d6a-9e3d-3d479dd48389))
     (pin "2" (uuid 15b44d6b-f278-4aa3-afac-6c8b8aaa4e6d))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "L1") (unit 1)
         )
@@ -2285,7 +2324,7 @@
     )
     (pin "1" (uuid 3c9235b2-b9e0-45b5-aa75-db58099ed8c8))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "H4") (unit 1)
         )
@@ -2311,7 +2350,7 @@
     (pin "1" (uuid f36d7da8-2ff8-4adf-8360-c0d5d55cd9d1))
     (pin "2" (uuid cfdf962e-7074-4bbd-9149-d513966f62e7))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C4") (unit 1)
         )
@@ -2334,13 +2373,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina180.pdf" (at 46.355 129.413 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC Part" "C544664" (at 46.355 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digikey Part" "296-48130-1-ND" (at 46.355 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid db5587c5-b194-4deb-80f5-19594a06e490))
     (pin "2" (uuid 46c48c89-4237-428d-85d7-9de6ba7c5229))
     (pin "3" (uuid d3f6187d-d674-4af5-9076-c335ade1ce37))
     (pin "4" (uuid f8786265-7501-4e18-a66c-b5fd7be6ec89))
     (pin "5" (uuid 26768d36-948e-4eac-a33f-ba57f3c8873a))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "U2") (unit 1)
         )
@@ -2366,7 +2411,7 @@
     (pin "1" (uuid 6223b9bd-1f0e-416e-b184-f6a89647d2af))
     (pin "2" (uuid 08b16965-acd1-46a9-99a1-7c7bf9d3efd4))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C1") (unit 1)
         )
@@ -2392,7 +2437,7 @@
     (pin "1" (uuid a9a45d05-bacd-43d1-978f-71b2efd1c061))
     (pin "2" (uuid 7fcfafca-787d-48aa-95a7-ecef6d4d7bcb))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R1") (unit 1)
         )
@@ -2417,7 +2462,7 @@
     )
     (pin "1" (uuid 11fb6502-fe03-4619-80b2-2bad999fa2fb))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR03") (unit 1)
         )
@@ -2442,7 +2487,7 @@
     )
     (pin "1" (uuid 579a9a00-c486-44d0-a371-1300594e1702))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR0114") (unit 1)
         )
@@ -2467,7 +2512,7 @@
     )
     (pin "1" (uuid 2d861b95-698c-4fbd-be70-1f671cfe54c8))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR0101") (unit 1)
         )
@@ -2492,7 +2537,7 @@
     )
     (pin "1" (uuid 1697172a-b9e8-47e5-b037-45e5b958ef8b))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR01") (unit 1)
         )
@@ -2515,6 +2560,12 @@
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ZXGD3009DY.pdf" (at 162.56 57.785 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
+    (property "LCSC Part" "C441818" (at 162.56 57.785 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digikey Part" "ZXGD3009DYTADICT-ND" (at 162.56 57.785 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid ef369395-c8e5-4547-859b-9b7562caf942))
     (pin "2" (uuid 97e38c10-d561-4dc8-af2e-339be87b3ef1))
     (pin "3" (uuid 6ce00c8f-c1fd-4adf-b992-37431ebb781f))
@@ -2522,7 +2573,7 @@
     (pin "5" (uuid f0f2eebe-64ef-4ddb-a45c-cf297c9bbf62))
     (pin "6" (uuid 802681f6-76d0-4407-8d46-15bf978bda61))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "U4") (unit 1)
         )
@@ -2548,7 +2599,7 @@
     (pin "1" (uuid 01a63aac-42ff-435f-9575-2b51a967ba2e))
     (pin "2" (uuid cf472678-929c-47a3-9382-0134cc818b6f))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C5") (unit 1)
         )
@@ -2574,7 +2625,7 @@
     (pin "1" (uuid 3f42050e-03ea-4284-b929-084b25b19add))
     (pin "2" (uuid 3aa4afd7-6089-4113-bf4a-f8c6af92f113))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C7") (unit 1)
         )
@@ -2588,19 +2639,25 @@
     (property "Reference" "D3" (at 199.39 38.1 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "SB54AFC_R1_00001" (at 190.5 42.545 90)
+    (property "Value" "SS54F" (at 190.5 42.545 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Brett-Footprint:DO221AC" (at 197.485 40.005 0)
+    (property "Footprint" "Brett-Footprint:D_SMAF" (at 197.485 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 197.485 40.005 0)
+    (property "Datasheet" "https://datasheet.lcsc.com/lcsc/2011091106_FUXINSEMI-SS54F_C915624.pdf" (at 197.485 40.005 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC Part" "C915624" (at 197.485 40.005 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digikey Part" "3757-SB54AFC_R1_00001CT-ND" (at 197.485 40.005 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8e2bccc8-fa84-40d0-b304-4a27087d81f6))
     (pin "2" (uuid c32ba4a5-2bab-4465-b9c5-2035f8f3b18f))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "D3") (unit 1)
         )
@@ -2626,7 +2683,7 @@
     (pin "1" (uuid 1a22b3d1-0049-46e5-b5ff-0ff3c57302be))
     (pin "2" (uuid 660b27e6-ba69-40b0-8c48-9d5f5822a49a))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "D1") (unit 1)
         )
@@ -2651,7 +2708,7 @@
     )
     (pin "1" (uuid 6745af39-0a52-459e-ae7a-8fd1f2c73cfb))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR04") (unit 1)
         )
@@ -2677,7 +2734,7 @@
     (pin "1" (uuid 4cbfb0c2-5aae-466c-b7d5-4987a9704935))
     (pin "2" (uuid 7f4fd6eb-690b-481a-b0c5-3102a70b2be6))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R10") (unit 1)
         )
@@ -2703,7 +2760,7 @@
     (pin "1" (uuid 0eb2e125-25df-4450-8b27-c22c753105de))
     (pin "2" (uuid fb813724-0e03-4b42-a096-263621965aa1))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R11") (unit 1)
         )
@@ -2729,7 +2786,7 @@
     (pin "1" (uuid da524a30-9556-4ff0-9f58-adc78591d270))
     (pin "2" (uuid 21d26e9b-50ed-4296-ab4d-c7e354730b3a))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R2") (unit 1)
         )
@@ -2755,7 +2812,7 @@
     (pin "1" (uuid 71d68073-6aa5-43fa-94d9-646827437bdd))
     (pin "2" (uuid b5e5ce08-7bbf-46d4-a952-79d6c482a58a))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C3") (unit 1)
         )
@@ -2781,7 +2838,7 @@
     (pin "1" (uuid f5ab2c55-33e2-4eb7-9f49-b6a745fe5080))
     (pin "2" (uuid f420dc6d-db23-45dd-8d2f-bedee1498b81))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R6") (unit 1)
         )
@@ -2807,7 +2864,7 @@
     (pin "1" (uuid 5f4402a6-71c2-4c16-aa3c-9c68081c7abd))
     (pin "2" (uuid 28e00ad7-1bbb-4056-a424-9be0fba38e86))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "C6") (unit 1)
         )
@@ -2833,7 +2890,7 @@
     (pin "1" (uuid e7c9ebd6-2ba3-492e-9c64-9de101d0e3c1))
     (pin "2" (uuid ad0c55a2-0a50-4729-99c1-4096f6cf28fe))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R4") (unit 1)
         )
@@ -2859,7 +2916,7 @@
     (pin "1" (uuid 31d79a9c-a853-426c-ac9a-ec2b2cb9e580))
     (pin "2" (uuid 122657fb-854a-4e5b-a498-717ed6a89d7f))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R5") (unit 1)
         )
@@ -2885,7 +2942,7 @@
     (pin "1" (uuid 4516c5d6-167a-4a0f-a8ef-770ee80f7c9b))
     (pin "2" (uuid 63f68732-1327-4c02-b10d-a21daf5192c5))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R7") (unit 1)
         )
@@ -2910,7 +2967,7 @@
     )
     (pin "1" (uuid 981e1772-5b5a-42fe-a735-a07aabd33f5e))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR0110") (unit 1)
         )
@@ -2933,13 +2990,19 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina180.pdf" (at 70.485 129.413 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC Part" "C1879708" (at 70.485 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digikey Part" "296-INA180B4IDBVRCT-ND" (at 70.485 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 1a10801c-a6eb-4163-a12b-4ef8b2d1e702))
     (pin "2" (uuid 90e21c5f-736a-4cce-895a-c3d1be96641b))
     (pin "3" (uuid a1166f2c-1c30-48cb-a555-b1686bc15dc8))
     (pin "4" (uuid d70d031b-c977-4ac6-8b23-68e634cd39b4))
     (pin "5" (uuid 9bf1c378-6151-4788-8736-7389710eb426))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "U1") (unit 1)
         )
@@ -2965,7 +3028,7 @@
     (pin "1" (uuid 0f0b90ed-ded0-4d03-90ce-6fee61ad0de8))
     (pin "2" (uuid 7a91dd9a-beae-4d05-ab15-26b09a13bf30))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R9") (unit 1)
         )
@@ -2990,7 +3053,7 @@
     )
     (pin "1" (uuid ee38112d-9207-4efd-8816-4ba5bf5168c8))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR0116") (unit 1)
         )
@@ -3004,7 +3067,7 @@
     (property "Reference" "R3" (at 127.635 57.785 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10k" (at 127.635 62.865 90)
+    (property "Value" "10" (at 127.635 62.865 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 127.635 62.103 90)
@@ -3016,7 +3079,7 @@
     (pin "1" (uuid 021ad4c2-5a8f-49aa-947b-afa52c7010d3))
     (pin "2" (uuid 74b03c60-a135-4721-b43c-6cf97ec810c1))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "R3") (unit 1)
         )
@@ -3041,36 +3104,9 @@
     )
     (pin "1" (uuid d22524f0-88d5-4397-ab8d-7fb2dfb97efd))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "#PWR06") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_FET:QM6006D") (at 142.24 60.325 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid f33286a0-fbb6-4319-b0c4-331c1eae3cce)
-    (property "Reference" "Q1" (at 147.32 59.055 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "T2N7002AK,LM" (at 147.32 61.595 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 147.32 62.23 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=29712&prodName=T2N7002AK" (at 142.24 60.325 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (pin "1" (uuid 4f7038e8-2b86-4933-926e-90a911c3d99e))
-    (pin "2" (uuid e9a91271-3877-4f50-9a01-a02279e0216e))
-    (pin "3" (uuid 23b8c208-77c6-4c04-9e20-f343194ee330))
-    (instances
-      (project "HeaterControl"
-        (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
-          (reference "Q1") (unit 1)
         )
       )
     )
@@ -3094,7 +3130,7 @@
     (pin "1" (uuid c85eea03-36ac-412f-ab33-d49e238adce4))
     (pin "2" (uuid 7d39feef-a7f7-4fa6-816f-a2fba0d73c2b))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "F1") (unit 1)
         )
@@ -3121,7 +3157,7 @@
     (pin "2" (uuid 5359d7b1-d015-4ebf-9394-faa99c6ddfdc))
     (pin "3" (uuid e77cc0a7-10af-4cdf-83a1-0c1a08375930))
     (instances
-      (project "HeaterControl"
+      (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
           (reference "12V1") (unit 1)
         )
