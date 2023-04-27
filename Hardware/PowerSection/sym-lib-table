@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PowerSection")(type "KiCad")(uri "${KIPRJMOD}/PowerSection.kicad_sym")(options "")(descr "Custom symbols used in the PowerSection schematic."))
+)
