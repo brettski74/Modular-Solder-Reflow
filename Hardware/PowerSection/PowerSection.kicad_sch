@@ -1384,6 +1384,7 @@
     )
   )
 
+
   (junction (at 144.78 31.75) (diameter 0) (color 0 0 0 0)
     (uuid 0c8f187e-1ba6-449b-bde1-d6383764caac)
   )
@@ -2545,7 +2546,7 @@
   (symbol (lib_id "Device:L") (at 204.47 31.75 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6b900cab-8496-432c-86dc-791b4c0ed95a)
-    (property "Reference" "L1" (at 204.47 26.67 90)
+    (property "Reference" "L2" (at 204.47 26.67 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22uH" (at 204.47 29.21 90)
@@ -2568,7 +2569,7 @@
     (instances
       (project "PowerSection"
         (path "/d77f81f5-4aeb-4219-833e-6d0cccd39831"
-          (reference "L1") (unit 1)
+          (reference "L2") (unit 1)
         )
       )
     )
