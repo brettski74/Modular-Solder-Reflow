@@ -1,5 +1,5 @@
 fp-info-cache
 *bak
 *-backups
-spice/*.log
-spice/*.raw
+**/spice/*.log
+**/spice/*.raw
