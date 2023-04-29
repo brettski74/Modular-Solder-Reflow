@@ -30,3 +30,5 @@ The RC snubbers formed by C8/R10 and C7/R8 are not entirely necessary for the ci
 Diode D1 provides a lower impedance path for discharge Q2's gate at turn-off time. While this is usually desirable, the circuit will likely work ok without it.
 
 If you have no intention of measuring the heater current, you can omit the INA180 current sense amplified and associated buffer and filter components. You do need to either include R11, R12 and R13 or alternatively short them with some wire suitable for the current you expect to drive with this board.
+
+Inductor L1 may not ne necessary. It's main purpose is to reduce the amount of noise fed back to the upstream power supply, however, the board will likely work relatively fine without it. If not used, simply short the contacts for L2 with some wire.
