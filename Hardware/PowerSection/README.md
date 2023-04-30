@@ -32,3 +32,8 @@ Diode D1 provides a lower impedance path for discharge Q2's gate at turn-off tim
 If you have no intention of measuring the heater current, you can omit the INA180 current sense amplified and associated buffer and filter components. You do need to either include R11, R12 and R13 or alternatively short them with some wire suitable for the current you expect to drive with this board.
 
 Inductor L1 may not ne necessary. It's main purpose is to reduce the amount of noise fed back to the upstream power supply, however, the board will likely work relatively fine without it. If not used, simply short the contacts for L2 with some wire.
+
+## 3D Models
+
+To render a 3D representation of the board and components, some of the footprints require 3D models that are not available with KiCad and are also not included in the git repository. There are freely available 3D models for these components, but since I'm not sure of the licensing of these models, I'm reluctant to include them and effectively be redistributing them in my git repository. Instead, I've included a shell script in the 3d subdirectory that will download the models from publicly accessible locations on the web for you to use for your own needs. If you don't care about a 3D rendering of the board and components, then you don't need these 3D models.
+
