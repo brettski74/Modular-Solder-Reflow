@@ -21,20 +21,20 @@ While care has been taken to design a reasonably efficient design and use compon
 
 The module includes the following connections:
 
-| Connector   | Pin  | Description |
-| :---        | :--- | :---        |
-| Barrel Jack |      | Input power. 12V minimum. 18-20V preferred. Note that the Digikey part is rated for up to 8A. The LCSC part is rated for up to 7A. 5.5 x 2.5mm barrel connector. Centre pin positive.|
-| 12-20V      |      | Alternate connection for external power positive terminal via an M3 ring connector or similar. |
-| GND         |      | Alternate connection for external power negative terminal via an M3 ring connector or similar. Grounded. |
-| Htr+        |      | Positive connection for the heating element. |
-| Htr-        |      | Negative connection for the heating element. Note that this is not grounded and must not be connected to the ground connections of this board. |
-| J1          | PWM  | PWM signal. The gate driver is inverting, so the PWM signal must be active low. When the PWM signal is below about 0.8V, the main MOSFET switch will be on. When this voltage is above about 2.5V, the main MMOSFET switch will be off. It does have a 10k pullup to /Vin/, so if left floating should ensure that the main MOSFET switch is off. |
-| ^           | Vin  | Supply voltage for the control board. This is used to power current sense and pullups for the gate drive input to ensure compatibility with the microcontroller. Must be between 3.0 and 5.5V. |
-| ^           | Ihi  | Current sense output for heating element current used for measuring high magnitude currents. Assuming a 15$ \Omega$ shunt, voltage should be approximately $V_{Ilo} = 0.015 \times 200 \times I_{htr}$. Output is limited to approximately /Vn/ |
-| ^           | Ilo  | Current sense output for heating element current used for measuring low magnitude currents. Assuming a 15$ \Omega$ shunt, voltage should be approximately $V_{Ilo} = 0.015 \times 200 \times I_{htr}$. Output is limited to approximately $V_{in}$ |
-| ^           | GND  | Ground connection for control board. |
-| J2          | VS   | Auxiliary connection for supplying power to external boards. This is not intended as an input pin and cannot safely supply the power requirements of the heating element. It is intended as an output to potentially feed power to other boards that may require it. For example, if you don't have some other power supply for your control board, you could feed this into a 3 terminal regulator to provide a steady 5V or 3.3V supply to your control board. |
-| ^           | GND  | Auxiliary ground connection for supplying power to external boards. The same power limitations and expected uses for /J2-VS/ also apply to this pin. |
+|| Connector   | Pin  | Description |
+| :--- | :---        | :--- | :---        |
+|| Barrel Jack |      | Input power. 12V minimum. 18-20V preferred. Note that the Digikey part is rated for up to 8A. The LCSC part is rated for up to 7A. 5.5 x 2.5mm barrel connector. Centre pin positive.|
+|| 12-20V      |      | Alternate connection for external power positive terminal via an M3 ring connector or similar. |
+|| GND         |      | Alternate connection for external power negative terminal via an M3 ring connector or similar. Grounded. |
+|| Htr+        |      | Positive connection for the heating element. |
+|| Htr-        |      | Negative connection for the heating element. Note that this is not grounded and must not be connected to the ground connections of this board. |
+|<td rowspan=5>J1</td>| PWM  | PWM signal. The gate driver is inverting, so the PWM signal must be active low. When the PWM signal is below about 0.8V, the main MOSFET switch will be on. When this voltage is above about 2.5V, the main MMOSFET switch will be off. It does have a 10k pullup to /Vin/, so if left floating should ensure that the main MOSFET switch is off. |
+|| Vin  | Supply voltage for the control board. This is used to power current sense and pullups for the gate drive input to ensure compatibility with the microcontroller. Must be between 3.0 and 5.5V. |
+|| Ihi  | Current sense output for heating element current used for measuring high magnitude currents. Assuming a 15$ \Omega$ shunt, voltage should be approximately $V_{Ilo} = 0.015 \times 200 \times I_{htr}$. Output is limited to approximately /Vn/ |
+|| Ilo  | Current sense output for heating element current used for measuring low magnitude currents. Assuming a 15$ \Omega$ shunt, voltage should be approximately $V_{Ilo} = 0.015 \times 200 \times I_{htr}$. Output is limited to approximately $V_{in}$ |
+|| GND  | Ground connection for control board. |
+|<td rowspan=5>J2</td>| VS   | Auxiliary connection for supplying power to external boards. This is not intended as an input pin and cannot safely supply the power requirements of the heating element. It is intended as an output to potentially feed power to other boards that may require it. For example, if you don't have some other power supply for your control board, you could feed this into a 3 terminal regulator to provide a steady 5V or 3.3V supply to your control board. |
+|| GND  | Auxiliary ground connection for supplying power to external boards. The same power limitations and expected uses for /J2-VS/ also apply to this pin. |
 
 ### Hotplates
 
