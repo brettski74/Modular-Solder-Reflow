@@ -36,6 +36,10 @@ The module includes the following connections:
 |<td rowspan=5>J2</td>| VS   | Auxiliary connection for supplying power to external boards. This is not intended as an input pin and cannot safely supply the power requirements of the heating element. It is intended as an output to potentially feed power to other boards that may require it. For example, if you don't have some other power supply for your control board, you could feed this into a 3 terminal regulator to provide a steady 5V or 3.3V supply to your control board. |
 || GND  | Auxiliary ground connection for supplying power to external boards. The same power limitations and expected uses for _J2-VS_ also apply to this pin. |
 
+A basic diagram of minimal connections to this module is shown below. A more typical setup would may also include additional items such as a screen, buttons/rotary encoder for input, voltage divider for measuring input voltage, thermistor or other temperature sensor connections and the like.
+
+![Minimal Connections Diagram](ArduinoNano_bb.png)
+
 ### Hotplates
 
 The modular design of this board requires that you supply a separate hotplate. While this does mean that you have more separate pieces to connect and potential higher expense to have them produced, it does provide the following advantages:
